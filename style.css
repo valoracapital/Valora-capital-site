@@ -1,122 +1,118 @@
-/* ==============================
+/* =========================================
    VALORA CAPITAL
+   Style.css completo
    Preto + Dourado
-   ============================== */
+========================================= */
 
-:root {
-  --preto: #0B0B0B;
-  --preto-claro: #171717;
-  --dourado: #D4AF37;
-  --dourado-claro: #F2D675;
-  --branco: #FFFFFF;
-  --cinza: #BDBDBD;
-}
-
-/* GERAL */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: var(--preto);
-  color: var(--branco);
-  line-height: 1.6;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0b0b;
+    color: #ffffff;
+    line-height: 1.6;
 }
 
-/* CABEÇALHO */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* CORES */
+
+:root {
+    --preto: #0b0b0b;
+    --preto-claro: #151515;
+    --dourado: #d4af37;
+    --dourado-claro: #f0d77a;
+    --branco: #ffffff;
+    --cinza: #b8b8b8;
+}
+
+/* =========================================
+   CABEÇALHO
+========================================= */
+
 header {
-  background: #000;
-  color: var(--branco);
-  padding: 18px 7%;
-  border-bottom: 2px solid var(--dourado);
+    width: 100%;
+    background: #0b0b0b;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 25px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .logo {
-  color: var(--dourado);
-  font-size: 26px;
-  font-weight: 800;
-  letter-spacing: 1px;
+    color: var(--dourado);
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    white-space: nowrap;
 }
 
-nav a {
-  color: var(--branco);
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
+.logo span {
+    color: #ffffff;
 }
 
-nav a:hover {
-  color: var(--dourado);
-}
-
-/* ÁREA PRINCIPAL */
-.hero {
-  min-height: 75vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 70px 7%;
-  background:
-    radial-gradient(circle at top, #242424 0%, #111 45%, #000 100%);
-}
-
-.hero h1 {
-  color: var(--dourado);
-  font-size: clamp(38px, 7vw, 70px);
-  line-height: 1.1;
-  margin-bottom: 18px;
-}
-
-.hero h2 {
-  color: var(--branco);
-  font-size: clamp(22px, 4vw, 38px);
-  margin-bottom: 15px;
-}
-
-.hero p {    color: #d6d6d6;
-    font-size: 18px;
-    line-height: 1.7;
-    max-width: 700px;
-    margin-bottom: 30px;
-}
-
-.hero-buttons {
+nav ul {
+    list-style: none;
     display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 28px;
+    margin: 0;
+    padding: 0;
 }
 
-.btn {
-    display: inline-block;
-    padding: 15px 28px;
-    border-radius: 8px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: 0.3s;
+nav ul li {
+    margin: 0;
+    padding: 0;
 }
 
-.btn-primary {
-    background: var(--dourado);
-    color: var(--preto);
+nav ul li a {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s ease;
 }
 
-.btn-primary:hover {
-    transform: translateY(-2px);
-    opacity: 0.9;
+nav ul li a:hover {
+    color: var(--dourado);
 }
+
+/* =========================================
+   HERO / INÍCIO
+========================================= */
+
+.hero {
+    min-height: 82vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px 60px;
