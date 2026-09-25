@@ -1,118 +1,105 @@
-/* =========================================
-   VALORA CAPITAL
-   Style.css completo
-   Preto + Dourado
-========================================= */
+/* =========================================================
+   VALORA CAPITAL — PREMIUM WEBSITE
+   Preto / Grafite / Dourado
+   ========================================================= */
+
+:root {
+  --black: #050505;
+  --black-2: #090909;
+  --graphite: #101010;
+  --graphite-2: #171717;
+  --gold: #d6aa45;
+  --gold-light: #f1d481;
+  --gold-dark: #a77a21;
+  --white: #ffffff;
+  --text: #eeeeee;
+  --muted: #a3a3a3;
+  --border: rgba(214,170,69,.20);
+  --border-soft: rgba(255,255,255,.08);
+}
+
+/* RESET */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
 }
 
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #0b0b0b;
-    color: #ffffff;
-    line-height: 1.6;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--black);
+  color: var(--white);
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
-/* CORES */
-
-:root {
-    --preto: #0b0b0b;
-    --preto-claro: #151515;
-    --dourado: #d4af37;
-    --dourado-claro: #f0d77a;
-    --branco: #ffffff;
-    --cinza: #b8b8b8;
+::selection {
+  background: var(--gold);
+  color: #000;
 }
 
-/* =========================================
-   CABEÇALHO
-========================================= */
-
-header {
-    width: 100%;
-    background: #0b0b0b;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.35);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+.container {
+  width: min(1180px, 90%);
+  margin: 0 auto;
 }
 
-nav {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 16px 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: rgba(5,5,5,.88);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border-bottom: 1px solid rgba(214,170,69,.14);
 }
+
+.nav {
+  min-height: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+
+/* LOGO */
 
 .logo {
-    color: var(--dourado);
-    font-size: 25px;
-    font-weight: 800;
-    letter-spacing: 1px;
-    white-space: nowrap;
+  display: inline-flex;
+  flex-direction: column;
+
+  line-height: .85;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
 }
 
-.logo span {
-    color: #ffffff;
+.logo-valora {
+  font-size: 23px;
+  color: #fff;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 28px;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li a {
-    color: #ffffff;
-    font-size: 15px;
-    font-weight: 600;
-    transition: 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: var(--dourado);
-}
-
-/* =========================================
-   HERO / INÍCIO
-========================================= */
-
-.hero {
-    min-height: 82vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 80px 20px 60px;
+.logo-capital {
+  font-size: 10px
